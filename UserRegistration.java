@@ -16,5 +16,7 @@ package com.bridgelabz.uservalidations;
 				uservalidation.password();
 			// password with One upper case
 				uservalidation.passwordOneUppercase();
+			// password validation for one numeric
+				uservalidation.passwordOneNumeric();
 		}
 }
