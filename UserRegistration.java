@@ -10,5 +10,7 @@ package com.bridgelabz.uservalidations;
 				uservalidation.lastName();		
 			// Email validation
 				uservalidation.email();
+			// Mobile validation
+				uservalidation.mobile();
 		}
 }
