@@ -9,7 +9,7 @@ class UserValidation
 		static final String Name_Pattern = "^[A-Z]{1}[a-z]{2,}";
 		static final String email_pattern = "^[A-Za-z0-9+_.]+@[A-Za-z0-9+_.]+$";
 		static final String mobile_Pattern = "^[0-9]{2}[ ][0-9]{10}+$";
-		static final String password_Pattern = "^[a-zA-Z0-9]{8,}+$";
+		static final String password_Pattern = "^(?=.*\\d)(?=.*[A-Z]).{8,20}$";
 		Scanner input = new Scanner(System.in);
 		
 		//Method for First name validation	
