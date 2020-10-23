@@ -14,5 +14,7 @@ package com.bridgelabz.uservalidations;
 				uservalidation.mobile();
 			// Password validation
 				uservalidation.password();
+			// password with One upper case
+				uservalidation.passwordOneUppercase();
 		}
 }

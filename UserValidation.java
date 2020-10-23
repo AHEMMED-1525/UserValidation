@@ -9,7 +9,7 @@ class UserValidation
 		static final String Name_Pattern = "^[A-Z]{1}[a-z]{2,}";
 		static final String email_pattern = "^[A-Za-z0-9+_.]+@[A-Za-z0-9+_.]+$";
 		static final String mobile_Pattern = "^[0-9]{2}[ ][0-9]{10}+$";
-		static final String password_Pattern = "^[a-z]{8,}+$";
+		static final String password_Pattern = "^[a-zA-Z]{8,}+$";
 		Scanner input = new Scanner(System.in);
 		
 		//Method for First name validation	
@@ -53,7 +53,7 @@ class UserValidation
 			boolean match =  matcher.matches();
 			System.out.println("Mobile number : " + mobile +" is " + match);
 		}
-		//Method for Mobile number validation
+		//Method for PASSWORD validation
 		public void password()
 		{
 			System.out.print("Enter your password : ");
@@ -63,5 +63,16 @@ class UserValidation
 			boolean match =  matcher.matches();
 			System.out.println("Password : " + password +" is " + match);
 		}
+		//Method for PASSWORD validation With one upper case
+		public void passwordOneUppercase()
+		{
+			System.out.print("Enter your password : ");
+			String password =input.next();
+			Pattern pattern = Pattern.compile(password_Pattern);
+			Matcher matcher = pattern.matcher(password);
+			boolean match =  matcher.matches();
+			System.out.println("Password : " + password +" is " + match);
+		}
+		
 	
 	}
