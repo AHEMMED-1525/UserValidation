@@ -7,26 +7,39 @@ import java.util.regex.Pattern;
 class UserValidation 
 	{
 		static final String Name_Pattern = "^[A-Z]{1}[a-z]{2,}";
+		static final String email_pattern = "^[A-Za-z0-9+_.]+@[A-Za-z0-9+_.]+$";
 		Scanner input = new Scanner(System.in);
 		
 		//Method for First name validation	
 		public void firstName()
 		{
-			System.out.println("Enter your First name : ");
+			System.out.print("Enter your First name : ");
 			String fname = input.nextLine();
 			Pattern pattern = Pattern.compile(Name_Pattern);
 			Matcher matcher = pattern.matcher(fname);
 			boolean match =  matcher.matches();
-			System.out.println("First name : " + fname + match);
+			System.out.println("First name : " + fname +" is " + match);
 		}
 		// Method for Last Name Validation
-		public void lastName() {
-			System.out.println("Enter your Last Name : ");
+		public void lastName()
+		{
+			System.out.print("Enter your Last Name : ");
 			String lname = input.nextLine();
 			Pattern pattern = Pattern.compile(Name_Pattern);
 			Matcher matcher = pattern.matcher(lname);
 			boolean match =  matcher.matches();
-			System.out.println("Last name : " +lname +" "+match);
+			System.out.println("Last name : " + lname +" is " + match);
+		}
+		// Method For Email validation
+		public void email()
+		{
+			System.out.print("Enter your Email : ");
+			String email =input.next();
+			Pattern pattern = Pattern.compile(email_pattern);
+			Matcher matcher = pattern.matcher(email);
+			boolean match =  matcher.matches();
+			System.out.println("Email : " + email +" is " + match);
+			
 		}
 	
 	}

@@ -7,6 +7,8 @@ package com.bridgelabz.uservalidations;
 			 // first name validation
 				uservalidation.firstName();
 			 // last name validation
-				uservalidation.lastName();			
+				uservalidation.lastName();		
+			// Email validation
+				uservalidation.email();
 		}
 }
